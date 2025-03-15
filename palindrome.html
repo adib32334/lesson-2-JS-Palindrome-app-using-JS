@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Palindrome app using JS</title>
+    </head>
+    <body>
+        <h2>
+        Welcome To My Webpage
+    </h2>
+        <script>
+            function Palindrome(mys) {
+                var inp = mys.replace(/[^A-Z0-9]/ig,"").toLowerCase();
+                var reinp = inp.split('').reverse().join('');
+            
+            if (inp === reinp) {
+                document.write("<div>"+mys + " is a palindrome <div>"); 
+            }
+            else {
+                document.write("<div>"+mys + " is not a palindrome <div>");
+            }
+        }
+            Palindrome("hello");
+            Palindrome("wow");
+        </script>
+    </body>
+</html>
