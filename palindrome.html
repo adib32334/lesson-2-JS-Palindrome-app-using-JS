@@ -6,20 +6,24 @@
         <h2>
         Welcome To My Webpage
     </h2>
+    <form>
+        <input type="text" id="inp1" >
+        <button onclick="Palindrome()">Check</button>
+        <p id="p1"></p>
+    </form>
         <script>
-            function Palindrome(mys) {
-                var inp = mys.replace(/[^A-Z0-9]/ig,"").toLowerCase();
+            function Palindrome() {
+                var out = document.getElementById("inp1").value;
+                var inp = out.replace(/[^A-Z0-9]/ig,"").toLowerCase();
                 var reinp = inp.split('').reverse().join('');
             
             if (inp === reinp) {
-                document.write("<div>"+mys + " is a palindrome <div>"); 
+                  document.write("<div>" + out + " is a palindrome <div>")
             }
             else {
-                document.write("<div>"+mys + " is not a palindrome <div>");
+                document.write("<div>"+ out + " is not a palindrome <div>");
             }
         }
-            Palindrome("hello");
-            Palindrome("wow");
         </script>
     </body>
 </html>
